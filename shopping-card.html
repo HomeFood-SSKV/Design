@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+         <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Favicon -->
+        <link type="image/x-icon" rel="shortcut icon" href="favicon.png" />
+        <title>HOMEFOODi</title>
+        <meta name="description" content="HOMEFOODi">  
+
+        <!-- Bootstrap stylesheet -->
+        <link href="assets/libs/bootstrap-4.0.0-dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- icofont -->
+        <link href="assets/libs/icofont/css/icofont.css" rel="stylesheet" type="text/css" />        
+        <!-- Theme Stylesheet -->
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body>
+        <div class="wrapper">
+            
+            <!--  Header Start  -->
+            <header>
+                <!--Top Header Start -->
+                <div class="top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-xs-12">
+                                <ul class="list-inline float-left icon">
+                                    <li class="list-inline-item">
+                                        <a href="javascript:void(0)">
+                                            <i class="icofont icofont-phone"></i> 
+                                            Hotline : 123 456 7890
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <!-- Header Social Start -->
+                                <ul class="list-inline float-right icon">
+                                    
+                                    <li class="list-inline-item ">
+                                        <a  onclick="openLoginModal();" data-toggle="modal" href="javascript:void(0)" role="button" >
+                                            <i class="icofont icofont-ui-user"></i> 
+                                            Login / Sign up
+                                        </a>                                        
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="javascript:void(0)">
+                                            <i class="icofont icofont-cart-alt"></i> 
+                                            Cart
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- Header Social End -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Top Header End -->
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <!-- Logo Start  -->
+                            <div class="logo">
+                                <a href="javascript:void(0)">
+                                    <img id="logo_img" class="img-menu" src="assets/images/logo/logo.png" alt="logo" title="logo" />
+                                </a>
+                            </div>
+                            <!-- Logo End  -->
+                        </div>
+
+                        <div class="col-md-7 col-sm-6 col-xs-12 paddleft">
+
+                            <!-- Main Menu Start  -->
+                            <div id="menu"> 
+                                <nav class="navbar navbar-expand-md">
+                                    <div class="navbar-header">
+                                        <span class="menutext d-block d-md-none">Menu</span>
+                                        <button data-target=".navbar-ex1-collapse" data-toggle="collapse" class="btn btn-navbar navbar-toggler" type="button">
+                                            <i class="icofont icofont-navigation-menu"></i>
+                                        </button>
+                                    </div>
+                                    <div class="collapse navbar-collapse navbar-ex1-collapse padd0">
+                                        <ul class="nav navbar-nav">
+                                            <li class="nav-item">
+                                                <a href="javascript:void(0)">HOME</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="javascript:void(0)">Our Combo's</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="javascript:void(0)">Home Chefs</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="javascript:void(0)">about us</a>
+                                            </li>                                            
+                                            <li class="nav-item">
+                                                <a href="javascript:void(0)">contact us</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                            <!-- Main Menu End -->
+                        </div>
+
+                        <div class="col-md-2 col-sm-12 col-xs-12 button-top paddleft">
+                            <a class="btn-primary btn" href='javascript:void(0)'>
+                                Order Food
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+            <!-- Header End  -->
+
+            <!-- Foodi cart  Start -->
+            <div class="main cart" id="shopping-cart">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active show" href="#tab-cart-info" data-toggle="tab">
+                                        <span>1</span>Cart Details
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tab-delivery-info" data-toggle="tab">
+                                        <span>2</span>Delivery info
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tab-payment-method" data-toggle="tab">
+                                        <span>3</span>Payment Method
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="bor"></div>
+
+                            <div class="tab-content">
+                                <div class="tab-pane col-md-12 col-12 active show" id="tab-cart-info">
+                                    <form method="post" >
+                                        <h2>You have <span>3 items</span> in your order.</h2>
+                                        <div class="table-responsive-md">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <td class="text-center">Name</td>
+                                                        <td class="text-right">Price</td>
+                                                        <td class="text-center">Qty.</td>
+                                                        <td class="text-right">Total</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">
+                                                                <img src="assets/images/dishes-menu/01.jpg" class="img-fluid" alt="thumb" title="thumb">
+                                                            </a>
+                                                            <div class="name">
+                                                                <h4>South Indian Meals</h4>
+                                                                <p>Lunch</p>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-right">₹ 121.00</td>
+                                                        <td class="text-center">
+                                                             <div class="food-add-minus">
+                                                                <div role="button" id="minus1" class="food-minus">-</div>
+                                                                <input type="text" name="quantity" value="1" size="2" 
+                                                                id="quantity1" class="food-quantity">
+                                                                <div role="button" id="add1" class="food-add">+</div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-right">₹ 121.00</td>
+                                                        <td class="text-center">
+                                                            <button type="button">
+                                                                X
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">
+                                                                <img src="assets/images/dishes-menu/01.jpg" class="img-fluid" alt="thumb" title="thumb">
+                                                            </a>
+                                                            <div class="name">
+                                                                <h4>South Indian Meals</h4>
+                                                                <p>Lunch</p>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-right">₹ 121.00</td>
+                                                        <td class="text-center">
+                                                             <div class="food-add-minus">
+                                                                <div role="button" id="minus1" class="food-minus">-</div>
+                                                                <input type="text" name="quantity" value="1" size="2" 
+                                                                id="quantity1" class="food-quantity">
+                                                                <div role="button" id="add1" class="food-add">+</div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-right">₹ 121.00</td>
+                                                        <td class="text-center">
+                                                            <button type="button">
+                                                                X
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">
+                                                                <img src="assets/images/dishes-menu/01.jpg" class="img-fluid" alt="thumb" title="thumb">
+                                                            </a>
+                                                            <div class="name">
+                                                                <h4>South Indian Meals</h4>
+                                                                <p>Lunch</p>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-right">₹ 121.00</td>
+                                                        <td class="text-center">
+                                                             <div class="food-add-minus">
+                                                                <div role="button" id="minus1" class="food-minus">-</div>
+                                                                <input type="text" name="quantity" value="1" size="2" 
+                                                                id="quantity1" class="food-quantity">
+                                                                <div role="button" id="add1" class="food-add">+</div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-right">₹ 121.00</td>
+                                                        <td class="text-center">
+                                                            <button type="button">
+                                                                X
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="3" class="text-right">
+                                                            <h3 class="text-right">TOTAL</h3></td>
+                                                        <td>
+                                                            <h3 class="text-right">₹ 363.00</h3>                      
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5" >
+                                                            <div class="buttons float-left">
+                                                                <a href="menu.html" class="btn btn-primary">
+                                                                    Continue Shopping
+                                                                </a>
+                                                            </div>
+                                                            <div class="buttons float-right">
+                                                                  <a  href="#tab-delivery-info" data-toggle="tab" class="btn btn-primary">
+                                                                    Checkout
+                                                                </a>
+                                                            </div>    
+                                                        </td>
+
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="tab-pane col-md-12 col-12" id="tab-delivery-info">
+                                    <div class="row">
+                                        <div class="col-lg-5 col-md-6 col-12">
+                                            <h6>Shopping Address</h6>
+
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <label class="check">
+                                                        <input type="radio" name="payment" class="checkclass">
+                                                        Delivery to this Address
+                                                    </label>
+                                                </li>                                               
+                                            </ul>
+                                            <div class="">
+                                                Address Details1</br>
+                                                Address Details2</br>
+                                                Address Details3</br>
+                                                Address Details4</br>
+                                                Address Details5</br>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-2 d-none d-lg-block"></div>
+                                        <div class="col-lg-5 col-md-6 col-12">                                            
+
+                                            
+                                            <form method="post" enctype="multipart/form-data">  
+                                                <fieldset> 
+                                                    <div class="buttons">
+                                                        <a href="#"  class="btn btn-primary">
+                                                            Add New Address
+                                                        </a>
+                                                    </div> 
+                                                    <div class="form-group">
+                                                        <input name="firstname" value="" placeholder="First Name" id="input-firstname" class="form-control" type="text">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input name="lastname" value="" placeholder="Last Name" id="input-lastname" class="form-control" type="text">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input name="email" value="" placeholder="Email" id="input-email" class="form-control" type="text">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input name="phone" value="" placeholder="Phone Number" id="input-phone" class="form-control" type="text">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input name="address" value="" placeholder="Address" id="input-address" class="form-control" type="text">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input name="City" value="" placeholder="City" id="input-City" class="form-control" type="text">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input name="Landmark" value="" placeholder="Landmark" id="input-state" class="form-control" type="text">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input name="code" value="" placeholder="Zip Code" id="input-code" class="form-control" type="text">
+                                                    </div>
+                                                </fieldset>
+                                                 <div class="buttons">
+                                                <a href="#"  class="btn btn-primary">
+                                                    Submit
+                                                </a>
+                                            </div>
+                                            </form>
+                                        </div>
+                                        <div class="col-md-12 col-12">
+                                            <div class="buttons float-left">
+                                                <a href="#tab-cart" data-toggle="tab" class="btn btn-primary">
+                                                    Shopping Cart
+                                                </a>
+                                            </div>
+                                            <div class="buttons float-right">
+                                                <a href="#tab-payment" data-toggle="tab" class="btn btn-primary">
+                                                    Continue
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane col-md-12 col-12" id="tab-payment-method">
+                                    <form class="form-horizontal" method="post">
+                                        <fieldset>
+                                            <div class="form-group ">
+                                                <ul class="list-inline text-center link">
+                                                    <li class="list-inline-item active">
+                                                        <a href="#">Visa</a>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <a href="#">Master</a>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <a href="#">Sodexo</a>
+                                                    </li>                                                  
+                                                    <li class="list-inline-item">
+                                                        <a href="#">Paypal</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="form-group row">    
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" id="input-card" placeholder="Card Holder Name" value="" name="holder" required="" type="text">
+                                                </div>
+                                            </div>  
+                                            <div class="form-group row">    
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" id="input-expiry" placeholder="Card Number" value="" name="card" required="" type="text">
+                                                </div>
+                                            </div>  
+                                            <div class="form-group row">
+                                                <label>Expiry Date</label>
+                                                <div class="col-sm-4">
+                                                    <input class="form-control" placeholder="Month" value="" name="month" required="" type="text">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <input class="form-control" placeholder="Year" value="" name="Year" required="" type="text">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <input class="form-control" id="input-cvv" placeholder="cvv" value="" name="cvv" required="" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-12 col-12 text-center">
+                                                    <div class="buttons">                                                        
+                                                        <a href="#" class="btn btn-primary">
+                                                            Place Order
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <!-- Food Menu End -->
+
+
+            <!-- Footer Start -->
+            <footer>
+                <div class="container">
+                    <div class="row inner">
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <!-- Address Start --> 
+                            <h5>Contact Us</h5>
+
+                            <ul class="list-unstyled contact">
+                                <li>
+                                    <i class="icofont icofont-social-google-map"></i> 
+                                    117, II floor, SSSS street, Velachery Chennai, Tamilnadu INDIA
+                                </li>
+                                <li>
+                                    <i class="icofont icofont-phone"></i> 
+                                    +91 9888888888,<br>
+                                    +91 9888888888
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icofont icofont-ui-message"></i>
+                                        info@homefoodi.com
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- Address  End --> 
+                        </div>
+
+                        <div class="col-sm-6 col-md-6 col-lg-3">                            
+                            <h5> Information</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Delivery Information</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Terms &amp; Conditions</a></li>
+                            </ul>                           
+                        </div>
+
+                        <div class="w-100 d-none d-xs-block"></div>
+                        <div class="col-sm-6 col-md-6 col-lg-3">                            
+                            <h5>ORDER TIMING</h5>
+                            <ul class="list-unstyled">
+                                <li>Breakfast - Order Before 6:00 am</li>
+                                <li>Lunch Order - Before 9:00 am</li>
+                                <li>Dinner Order - Before 6:00 pm</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <h5>DELIVERY HOURS</h5>
+                            <ul class="list-unstyled">
+                                <li>Breakfast - 07:30 am - 08:30 am</li>
+                                <li>Lunch Order - 01:00pm - 02:00pm</li>
+                                <li>Dinner Order - 07:30 pm – 09:40 pm</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="row powered">
+                            <!--  Copyright Start -->
+                            <div class="col-md-3 col-sm-6 order-md-1">
+                                <img src="assets/images/logo/logo.png" class="img-fluid" title="logo" alt="logo">
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 text-right order-md-3">
+                                <!--  Footer Social Start -->
+                                <ul class="list-inline social">
+                                    <li class="list-inline-item"><a href="https://www.facebook.com/" target="_blank"><i class="icofont icofont-social-facebook"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://twitter.com/" target="_blank"><i class="icofont icofont-social-twitter"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://plus.google.com/" target="_blank"><i class="icofont icofont-social-google-plus"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://in.pinterest.com/" target="_blank"><i class="icofont icofont-social-pinterest"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank"><i class="icofont icofont-social-instagram"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://www.youtube.com/" target="_blank"><i class="icofont icofont-social-youtube-play"></i></a></li>
+                                </ul>
+                                <!--  Footer Social End -->
+                            </div>
+
+                            <div class="col-md-6 col-sm-12 text-center order-md-2">
+                                <p>Copyright © <span>homefoodi</span> 2018. All Rights Reserved.</p>
+                            </div>
+                            <!--  Copyright End -->
+
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer End  -->
+
+        </div>
+
+        <!-- jquery -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <!-- jquery Validate -->
+        <script src="assets/libs/jquery-validation/jquery.validate.min.js"></script> 
+        <!-- bootstrap js -->
+        <script src="assets/libs/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script> 
+  
+    </body>
+
+</html>
+

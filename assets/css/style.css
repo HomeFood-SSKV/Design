@@ -107,6 +107,27 @@ a:focus {
     background: #ff9600;
     border: 1px solid #ff9600; 
     box-shadow: none !important;
+    color: #fff;
+}
+.btn-secondary {
+    background: #6929da;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 4px;     
+    height: 30px;
+    line-height: 30px;
+}
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:active:hover, 
+.btn-secondary:focus,
+.btn-secondary:not(:disabled):not(.disabled).active, 
+.btn-secondary:not(:disabled):not(.disabled):active {
+    background: red;
+    border: 1px solid red; 
+    box-shadow: none !important;
 }
 .des {
     font-size: 15px;
@@ -428,7 +449,7 @@ header .logo img {
     border-bottom:none;
 }
 #menu .dropdown-menu li a{
-    color:#000;
+    color:#222;
     font-size:14px;
     font-weight:400;
     text-transform:capitalize;
@@ -517,7 +538,9 @@ header .logo img {
 /* FOOTER SECTION
 ---------------------------------------------------------------------*/
 
-footer {
+footer {    
+    float: left;
+    width: 100%;
     background: #f1f1f1;
 }
 footer .inner {
@@ -855,7 +878,7 @@ footer .powered .social li a:hover i {
     border:none;
     font-weight: 600;
     font-size: 14px;
-    color: #000;
+    color: #222;
     line-height: 14px;
     margin: 0 ;
     text-transform:uppercase;
@@ -923,6 +946,7 @@ footer .powered .social li a:hover i {
 }
 
 /* date selection */
+
 .date-select-wrap {
     margin-bottom: 20px;
     width: 100%;
@@ -1024,10 +1048,259 @@ footer .powered .social li a:hover i {
     color: #fff;
     background: #6929da;  
 }
-
-
 .menu .box:hover {
     -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.20);
     -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.20);
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.20);
+}
+
+.main {
+    position: relative;
+    float: left;
+    background: #fafafa;
+    width: 100%;
+}
+
+/*
+ shopping Cart
+---------------------------- */
+.cart {
+    padding: 30px 0;
+}
+.cart .nav-tabs {
+    border: 0;
+    margin: 0 0 30px;
+}
+.cart .nav-tabs li {
+    width: 33.33%;
+    text-align: center;
+}
+.cart .nav-tabs li .active span {
+    background: #6929da;
+    border: 1px solid #6929da;
+    color: #fff;
+}
+.cart .nav-tabs li span {
+    position: relative;
+    z-index: 2;
+    margin: 0 auto 20px;
+    width: 40px;
+    height: 40px;
+    padding: 6px;
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
+    border: 1px solid #e5e5e5;
+    background: #f1f1f1;
+    border-radius: 50%;
+}
+.cart .nav-tabs > li > a {
+    padding: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+    border: 0;
+}
+.cart .nav-tabs > li > a.active {
+    border: 0;
+    background: transparent;
+    color: #222;
+}
+.cart .nav > li > a:hover, 
+.cart .nav > li > a:focus {
+    text-decoration: none;
+    background-color: transparent;
+}
+.cart .bor {    
+    position: absolute;
+    z-index:1;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 17%;
+    border-top: 2px solid #e5e5e5;
+}
+.cart #tab-cart-info h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    margin: 0 0 15px;
+}
+.cart #tab-cart-info h2 span {
+    color: #6929da;
+}
+.cart #tab-cart-info td {
+    padding: 10px 20px;
+    border: 0;
+    border-top: 1px solid #e5e5e5;
+    vertical-align: middle;
+}
+.cart #tab-cart-info thead td {
+    background: #f1f1f1;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #222;
+}
+.cart .table-responsive > .table-bordered {
+    border: 1px solid #dee2e6;
+}
+.cart #tab-cart-info tbody tr td:nth-child(1) {
+    width: 35%;
+}
+.cart #tab-cart-info tbody tr td:nth-child(5) {
+    width: 5%;
+}
+.cart #tab-cart-info tbody tr td:nth-child(2),
+.cart #tab-cart-info tbody tr td:nth-child(3), 
+.cart #tab-cart-info tbody tr td:nth-child(4) {
+    width: 20%;
+}
+.cart #tab-cart-info tbody tr:last-child td {
+    background: #f1f1f1;
+}
+.cart #tab-cart-info td img {
+    float: left;
+    margin: 0 20px 0 0;    
+    border: 1px solid #e5e5e5;
+    width: 100px;
+    height: 60px;
+}
+.cart #tab-cart-info td .name h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    margin: 0;
+}
+.cart #tab-cart-info td .name p {
+    margin: 0px 0 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #222;    
+}
+.cart #tab-cart-info td .rating i {
+    font-size: 14px;
+    color: #FFA41F;
+}
+.cart #tab-cart-info td .rating i:last-child {
+    color:#b2b2b2;
+}
+.cart #tab-cart-info tbody tr td:nth-child(2), 
+.cart #tab-cart-info tbody tr td:nth-child(4){
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+}
+.cart #tab-cart-info td button {
+    background: none;
+    border: none;
+    box-shadow: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.cart #tab-cart-info  tbody tr td h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin: 0 0 10px;
+}
+.cart #tab-delivery-info,
+.cart #tab-payment-method {
+    border:1px solid #e5e5e5;
+    border-radius:4px;
+    padding:40px 30px;
+}
+.cart #tab-delivery-info h6 {
+    font-size:18px;
+    font-weight:600;
+    color:#222;
+    margin:0 0 30px;
+    text-transform:uppercase;
+}
+.cart #tab-delivery-info .form-group{
+    margin:0;
+}
+.cart #tab-delivery-info .form-control{
+    height:45px;
+    margin:0 0 30px;
+    text-transform:uppercase;
+    border:1px solid #e5e5e5;
+    color:#b3b3b3;
+}
+.cart #tab-delivery-info .form-control:focus{
+    box-shadow: none;
+    border-color: #6929da;
+}
+.cart #tab-payment-method form {
+    margin:0 auto;
+    max-width: 455px;
+}
+.cart #tab-payment-method form .link {
+    margin:0 0 50px;
+}
+.cart #tab-payment-method form .link li {
+    border: 2px solid #e5e5e5;
+      padding: 20px 4px;
+      border-radius: 50%;
+      margin-right: 20px;
+      position: relative;
+      width: 70px;
+      height: 70px;
+}
+.cart #tab-payment-method form .link li:hover, 
+.cart #tab-payment-method form .link li.active {
+    border: 3px solid #FFA41F;
+}
+.cart #tab-payment-method form .link li:hover::after,
+.cart #tab-payment-method form .link li.active::after  {
+    border-bottom: 7px transparent dashed;
+    border-top: 10px solid #FFA41F;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    position: absolute;
+    bottom: -18px;
+    display: block;
+    content: "";
+    left:0;
+    right:0;
+    margin:0 auto; 
+    width:6px;
+    height:6px;
+}
+.cart #tab-payment-method .form-group{
+    margin:0;
+}
+.cart #tab-payment-method .form-control,
+.cart #tab-payment-method form .bootstrap-select .btn{
+    height:45px;
+    margin:0 0 30px;
+    text-transform:uppercase;
+    border:1px solid #e5e5e5;
+    color:#b3b3b3;
+}
+.cart #tab-payment-method .form-control:focus{
+    box-shadow: none;
+    border-color: #6929da;
+}
+.cart #tab-payment-method label {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 15px;
+    text-transform: uppercase;
+    color: #222;
+    width: 100%;
+    padding: 0 15px;
+}
+.cart .food-add-minus {
+    position: relative;
+    top: 0;
+    visibility: visible;
+    float: left;    
+    display: inline-block;
+    width: 100%;
+    z-index: 1;
+    background: #fff;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
 }
